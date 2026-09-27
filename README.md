@@ -20,10 +20,10 @@ pra ficar fácil achar a automação correspondente.
 |---|---|---|---|
 | TC-001 | Login válido | Alta | Finalizado |
 | TC-002 | Compra completa, do catálogo ao checkout | Alta | Finalizado |
-| TC-003 | Ordenação de produtos | Média | não executado |
-| TC-004 | Remover item do carrinho | Média | não executado |
-| TC-005 | Reset do app (long press no header) | Média | não executado |
-| TC-006 | QR Code Scanner + permissão de câmera | Baixa | não executado |
+| TC-003 | Ordenação de produtos | Média | Finalizado |
+| TC-004 | Remover item do carrinho | Média | Finalizado |
+| TC-005 | Reset do app (long press no header) | Média | Finalizado |
+| TC-006 | QR Code Scanner + permissão de câmera | Baixa | Em andamento |
 
 ## Rodando os testes
 

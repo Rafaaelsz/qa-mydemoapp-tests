@@ -1,0 +1,37 @@
+appId: com.saucelabs.mydemoapp.android
+---
+- launchApp:
+    clearState: true
+
+# Alterando a ordenação do catálogo
+- tapOn: "Shows current sorting order and displays available sorting options"
+- tapOn: "Name - Descending"
+
+# Adicionando item no carrinho para validação do reset de estado do app
+- tapOn: "Product Image"
+- scrollUntilVisible:
+    element: "Add to cart"
+- tapOn: "Add to cart"
+
+# Verificando o carrinho com o item
+- tapOn:
+    text: "Displays number of items in your cart"
+    index: 1
+
+# Voltando para a tela inicial
+- tapOn: "View menu"
+- tapOn: "Catalog"
+
+# Resetando o estado do app
+- tapOn: "View menu"
+- tapOn: "Reset App State"
+- tapOn: "RESET APP"
+
+# Verificando se o estado do app foi resetado
+- assertVisible: "App State has been reset."
+- tapOn: "OK"
+- tapOn: "Displays number of items in your cart"
+
+# Voltando para a tela inicial novamente
+- assertVisible: "No Items"
+- tapOn: "Go Shopping"

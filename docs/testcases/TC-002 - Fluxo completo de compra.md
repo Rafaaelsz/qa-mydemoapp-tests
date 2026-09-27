@@ -1,17 +1,16 @@
-
 **App:** saucelabs/my-demo-app-android **Ferramenta:** Maestro Studio
 
 ---
 
 ## Ficha do caso
 
-|Campo|Detalhe|
-|---|---|
-|**ID**|TC-002|
-|**Título**|Fluxo completo de compra, do catálogo até a confirmação do pedido|
-|**Pré-condição**|Login realizado com `standard_user` / `secret_sauce`; carrinho vazio|
-|**Prioridade**|Alta|
-|**Tipo**|Funcional / E2E|
+| Campo            | Detalhe                                                              |
+| ---------------- | -------------------------------------------------------------------- |
+| **ID**           | TC-002                                                               |
+| **Título**       | Fluxo completo de compra, do catálogo até a confirmação do pedido    |
+| **Pré-condição** | Login realizado com `standard_user` / `secret_sauce`; carrinho vazio |
+| **Prioridade**   | Alta                                                                 |
+| **Tipo**         | Funcional                                                            |
 
 ## Passos
 
@@ -277,7 +276,9 @@ element: "Estimated to arrive within 3 weeks."
 **Status:** `[X] Passou` `[ ] Falhou` `[ ] Bloqueado`
 
 ## **Evidências (prints/vídeo):**
-![[tc-002-checkout.mp4]]
+
+Na pasta "tc-videos" dentro do repo.
+
 ## **Observações extras:**
 
-Os testes foram realizados com sucesso e sem problemas apresentados durante o processo.
+Os testes foram realizados com sucesso e sem problemas apresentados durante o processo. O resulado esperado foi obtido.

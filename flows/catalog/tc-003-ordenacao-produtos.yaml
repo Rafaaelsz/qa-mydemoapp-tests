@@ -1,0 +1,28 @@
+appId: com.saucelabs.mydemoapp.android
+---
+- launchApp:
+    clearState: true
+
+# Verificando se está na tela do catálogo
+- assertVisible: "Products"
+
+# Tocando no sort by
+- tapOn: "Shows current sorting order and displays available sorting options"
+- assertVisible: "Sort by:"
+
+# Selecionando a opção "low to high"
+- tapOn: "Ascending order by price"
+
+# Tocando no sort by
+- tapOn: "Shows current sorting order and displays available sorting options"
+- assertVisible: "Sort by:"
+
+# Selecionando a opção "high to low"
+- tapOn: "Descending order by price"
+
+# Tocando no sort by
+- tapOn: "Shows current sorting order and displays available sorting options"
+- assertVisible: "Sort by:"
+
+#  Selecionando a opção "Decrescente"
+- tapOn: "Descending order by name"

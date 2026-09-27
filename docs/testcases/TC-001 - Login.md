@@ -1,6 +1,3 @@
-
-# TC-001 — Login com credenciais válidas
-
 **App:** saucelabs/my-demo-app-android **Ferramenta:** Maestro Studio
 
 ---
@@ -130,7 +127,10 @@ index: 1
 
 ## **Evidências (prints/vídeo):**
 
-![[maestro_flow_flow_1790515514375_902.mp4]]
+Na pasta "tc-videos" dentro do repo.
+
 ## **Observações extras:**
 
 Os testes foram realizados com sucesso e sem problemas apresentados durante o processo. O resulado esperado foi obtido.
+
+**Isso não significa que houve validação de credenciais, pois o app demo não é criado com esta ideia, ele apenas é utilizado para testes de automação mobile.**

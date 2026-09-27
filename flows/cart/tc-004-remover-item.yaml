@@ -1,0 +1,65 @@
+appId: com.saucelabs.mydemoapp.android
+---
+- launchApp:
+    clearState: true
+
+# Tela inicial
+- assertVisible: "Products"
+
+# Flow de login
+- tapOn: "View menu"
+- assertVisible: "Log In"
+- tapOn: "Log In"
+
+# Dados do usuário
+- assertVisible: "Login"
+- tapOn:
+    id: "nameET"
+- inputText: "standard_user"
+- tapOn:
+    id: "passwordET"
+- inputText: "secret_sauce"
+- hideKeyboard
+
+# Login 
+- assertVisible:
+    text: "Login"
+    index: 1
+
+- tapOn:
+    text: "Login"
+    index: 1
+
+# Verificar se o botão Log In foi atualizado para Log out
+- tapOn: "View menu"
+- assertVisible: "Log Out"
+
+# Se estiver ok, irá retornar para o catálogo
+- tapOn: "Catalog"
+
+# Clicando no produto
+- tapOn: "Product Image"
+
+# Verificando nome, descrição e preço exibidos na tela de detalhes
+- assertVisible: "Displays selected product"
+- scrollUntilVisible:
+    element: "$ 29.99"
+
+# Adicionando ao carrinho e trocando a cor da mochila
+- tapOn: "Blue color"
+- tapOn: "Add to cart"
+
+# Indo para o checkout
+- tapOn:
+    text: "Displays number of items in your cart"
+    index: 1
+- assertVisible: "My Cart"
+
+# Tocando no botão "-"
+- tapOn: "Decrease item quantity"
+
+# Verificando que não posso continuar a compra sem itens no carrinho
+- assertVisible: "No Items"
+
+# Voltando para o catálogo
+- tapOn: "Go Shopping"

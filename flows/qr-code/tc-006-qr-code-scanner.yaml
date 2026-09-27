@@ -1,0 +1,8 @@
+appId: com.saucelabs.mydemoapp.android
+---
+- launchApp:
+    clearState: true
+
+# Abrindo o QR code scanner
+- tapOn: "View menu"
+- tapOn: "QR Code Scanner"
