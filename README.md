@@ -45,8 +45,8 @@ Ou a pasta inteira:
 maestro test flows/
 ```
 
-## TODO
+## A fazer
 
-- automatizar TC-002 a TC-006
+- automatizar TC-003 a TC-006
 - ver se dá pra rodar isso no GitHub Actions
 - adicionar casos de login inválido / usuário bloqueado
