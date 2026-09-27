@@ -1,0 +1,101 @@
+appId: com.saucelabs.mydemoapp.android
+---
+- launchApp:
+    clearState: true
+
+# Clicando no produto
+- tapOn: "Product Image"
+
+# Verificando nome, descrição e preço exibidos na tela de detalhes
+- assertVisible: "Displays selected product"
+- scrollUntilVisible:
+    element: "$ 29.99"
+
+# Adicionando ao carrinho e trocando a cor da mochila
+- tapOn: "Gray color"
+- tapOn: "Add to cart"
+
+# Indo para o checkout
+- tapOn:
+    text: "Displays number of items in your cart"
+    index: 1
+- assertVisible: "My Cart"
+
+# Pagamento
+- tapOn: "Proceed To Checkout"
+
+# Adicionando credenciais de login
+- assertVisible: "Login"
+- tapOn:
+    id: "nameET"
+- inputText: "standard_user"
+- tapOn:
+    id: "passwordET"
+- inputText: "secret_sauce"
+- hideKeyboard
+- assertVisible:
+    id: "loginBtn"
+- tapOn: 
+    id: "loginBtn"
+
+# Adicionando dados de endereço de envio
+- assertVisible: "Checkout"
+- tapOn:
+    id: "fullNameET"
+- inputText: "Rafael Tavares"
+- tapOn: "Next"
+- inputText: "R. Verão do Cometa"
+- hideKeyboard
+- tapOn:
+    id: "cityET"
+- inputText: "Itaquera"
+- tapOn:
+    id: "stateET"
+- inputText: "SP"
+- hideKeyboard
+- tapOn:
+    id: "zipET"
+- inputText: "8223-640"
+- tapOn:
+    id: "countryET"
+- inputText: "Brazil"
+- hideKeyboard
+
+# Indo para o pagamento
+- scrollUntilVisible:
+    element: "To Payment"
+- tapOn: "To Payment"
+
+# Adicionando informações de cobrança
+- assertVisible: "Enter a payment method"
+- tapOn:
+    id: "nameET"
+- inputText: "Rafael Tavares"
+- tapOn: "Next"
+- inputText: "5118159387903372"
+- hideKeyboard
+- tapOn:
+    id: "expirationDateET"
+- inputText: "0928"
+- tapOn:
+    id: "securityCodeET"
+- inputText: "484"
+- tapOn: "Done"
+
+# Scrollando até a opção que salva as informações
+- scrollUntilVisible:
+    element: "My billing address is the same as my shipping address."
+- hideKeyboard
+
+# Verificando as informações do pedido
+- tapOn: "Review Order"
+- scrollUntilVisible:
+    element: "Estimated to arrive within 3 weeks."
+
+# Finalizando pedido
+- tapOn: "Place Order"
+
+# Conferindo se o pedido foi completo e voltando para a página de comprar
+- assertVisible: "Checkout Complete"
+- tapOn: "Continue Shopping"
+- assertVisible: "Products"
