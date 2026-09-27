@@ -19,7 +19,7 @@ pra ficar fácil achar a automação correspondente.
 | ID | O que testa | Prioridade | Status |
 |---|---|---|---|
 | TC-001 | Login válido | Alta | Finalizado |
-| TC-002 | Compra completa, do catálogo ao checkout | Alta | não executado |
+| TC-002 | Compra completa, do catálogo ao checkout | Alta | Finalizado |
 | TC-003 | Ordenação de produtos | Média | não executado |
 | TC-004 | Remover item do carrinho | Média | não executado |
 | TC-005 | Reset do app (long press no header) | Média | não executado |
