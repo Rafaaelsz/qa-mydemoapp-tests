@@ -1,2 +1,7 @@
 flows:
-  - "**"
+  - "login/*"
+  - "checkout/*"
+  - "catalog/*"
+  - "cart/*"
+  - "app-state/*"
+  - "qr-code/*"
